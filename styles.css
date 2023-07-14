@@ -1,0 +1,21 @@
+.letterInput{
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+}
+h1{
+    text-align: center;
+}
+.letter{
+    padding:12px;
+   
+    display:flex;
+
+    flex-direction: row;
+    
+    border-bottom: 1px solid black;
+}
+p{
+  display:flex;
+  justify-content: space-between;
+}

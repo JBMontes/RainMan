@@ -16,7 +16,7 @@ justify-content: space-evenly;
 
 h1{
     text-align: center;
-    color: red
+    color: black
 }
 .letter{
     padding:12px;
@@ -61,4 +61,36 @@ ul{
 li:hover{
   color:white;
   
+}
+.img{
+  display:flex;
+  flex-direction: row;
+  
+}
+
+.one{
+visibility: hidden;
+}
+
+.two{
+  visibility:hidden
+}
+
+.three{
+  visibility: hidden;
+}
+
+.four{
+  visibility: hidden;
+}
+
+.five{
+  visibility: hidden;
+}
+
+.wordArray{
+  font-size: 40px;
+  font-family: monospace;
+  text-emphasis: bold ;
+  color:red
 }

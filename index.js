@@ -5,6 +5,8 @@ function displayCard(word) {
 
   for (let letter of word) {
     let gameWord = document.createElement("p");
+    gameWord.classList.add("wordArray");
+    gameWord.style.visibility= "hidden"
     gameWord.innerText = letter.toUpperCase();
 
     words.append(gameWord);
@@ -16,16 +18,6 @@ function displayCard(word) {
       single.innerText = singleLetter.toUpperCase();
       letterInput.append(single);
       card.append(letterInput);
-
-      let alphabet = document.querySelectorAll("li");
-      for (let letter of alphabet) {
-        letter.addEventListener("click", (e) => {
-          if (e.target.innerText === single.innerText) {
-            single.style.color = "white";
-            e.target.style.color = "transparent";
-          }
-        });
-      }
     });
   }
 }
@@ -37,4 +29,58 @@ fetch("https://random-word-api.herokuapp.com/word")
     console.log(err);
   });
 
- 
+let img = document.querySelector("img");
+let alphabet = document.querySelectorAll("li");
+let count = 0;
+let trys = 5;
+
+for (let letter of alphabet) {
+  letter.addEventListener("click", (e) => {
+    e.preventDefault();
+    let one = document.querySelector(".one")
+    let two = document.querySelector(".two")
+    let three = document.querySelector(".three");
+    let four = document.querySelector(".four");
+    let five = document.querySelector(".five");
+    let singleLetter = document.querySelectorAll(".letter");
+    let wordArray = document.querySelectorAll(".wordArray");
+    let actualWord = wordArray[0].innerText;
+    
+    if (!actualWord.includes(e.target.innerText)) {
+      trys -= 1;
+      if (trys == 4) {
+     ;
+        one.style.visibility = "visible";
+      }
+      if (trys == 3) {
+       ;
+        two.style.visibility = "visible";
+        one.style.visibility = "hidden"
+      }
+      if (trys == 2) {
+        
+        three.style.visibility = "visible";
+        two.style.visibility = "hidden";
+      }
+      if (trys == 1) {
+     
+        four.style.visibility = "visible";
+        three.style.visibility = "hidden";
+      }
+      if (trys == 0) {
+       
+        five.style.visibility = "visible";
+        four.style.visibility = "hidden";
+        document.querySelector(".wordArray").removeAttribute("style")
+      }
+      
+    }
+
+    for (let letters of singleLetter) {
+      if (e.target.innerText === letters.innerText) {
+        letters.style.color = "black";
+        e.target.style.color = "transparent";
+      }
+    }
+  });
+}

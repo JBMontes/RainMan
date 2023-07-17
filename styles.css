@@ -64,6 +64,7 @@ ul{
   flex-direction: row;
   justify-content: space-evenly;
   border: 3px solid black;
+  border-radius: 50px;
   background-color: green;
   animation: lower;
   animation-duration: 7s;

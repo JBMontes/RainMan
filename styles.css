@@ -77,7 +77,9 @@ li:hover{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-
+  border-bottom: 3px solid green;
+  animation: invisible;
+  animation-duration: 10s;
   
 }
 
@@ -160,4 +162,14 @@ background-color: yellow;
 @keyframes lower{
   from{top: -800px}
   to{top:0px}
+}
+
+@keyframes invisible{
+  from{opacity: 0.01;}
+  to{opacity: 1.0;}
+}
+
+img{
+  position:relative;
+  top:5px;
 }

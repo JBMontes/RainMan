@@ -30,9 +30,12 @@ h1{
 
     flex-direction: row;
     
-    border-bottom: 1px solid black;
+    border-bottom: 4px solid black;
 
-    color:transparent
+    color:transparent;
+
+    animation-name: invisible;
+    animation-duration:10s;
 }
 p{
   display:flex;

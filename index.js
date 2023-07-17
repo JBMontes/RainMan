@@ -18,6 +18,8 @@ function displayCard(word) {
       single.innerText = singleLetter.toUpperCase();
       letterInput.append(single);
       card.append(letterInput);
+
+
     });
   }
 }
@@ -36,18 +38,25 @@ let trys = 5;
 
 for (let letter of alphabet) {
   letter.addEventListener("click", (e) => {
+  
     e.preventDefault();
+
     let one = document.querySelector(".one")
     let two = document.querySelector(".two")
     let three = document.querySelector(".three");
     let four = document.querySelector(".four");
     let five = document.querySelector(".five");
     let singleLetter = document.querySelectorAll(".letter");
-    let wordArray = document.querySelectorAll(".wordArray");
-    let actualWord = wordArray[0].innerText;
     
-    if (!actualWord.includes(e.target.innerText)) {
+    let wordArray = document.querySelector(".wordArray");
+   let innerT = wordArray.innerHTML
+ 
+    let text = e.target.innerText
+    
+    if (!innerT.includes(text)) {
+ 
       trys -= 1;
+      console.log(trys)
       if (trys == 4) {
      ;
         one.style.visibility = "visible";
@@ -72,6 +81,8 @@ for (let letter of alphabet) {
         five.style.visibility = "visible";
         four.style.visibility = "hidden";
         document.querySelector(".wordArray").removeAttribute("style")
+        document.querySelector(".over").style.visibility = "visible";
+       
       }
       
     }
@@ -84,3 +95,10 @@ for (let letter of alphabet) {
     }
   });
 }
+
+let button = document.querySelector("button")
+button.addEventListener("click", (e)=>{
+
+location.reload()
+
+})

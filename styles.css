@@ -59,12 +59,14 @@ ul{
 }
 
 li:hover{
-  color:white;
+  color:brown;
   
 }
 .img{
   display:flex;
   flex-direction: row;
+  justify-content: space-between;
+
   
 }
 
@@ -93,4 +95,52 @@ visibility: hidden;
   font-family: monospace;
   text-emphasis: bold ;
   color:red
+}
+.one:hover{
+  background-color: greenyellow;
+}
+.two:hover{
+  background-color: greenyellow;
+}
+.three:hover{
+  background-color: greenyellow;
+}
+.four:hover{
+  background-color: greenyellow;
+}
+.five:hover{
+  background-color: black;
+}
+
+.over{
+  visibility: hidden;
+  font-size: 30px;
+  color:red;
+  font-family: monospace;
+  padding: 9px;
+}
+
+.gameOver{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1:hover{
+  color:brown ;
+  font-size: 100px;
+  text-decoration: underline;
+}
+.tryAgain{
+width: 4%;
+display: flex;
+justify-content: center;
+border-radius: 50px;
+border: 3px solid black;
+background-color: yellow;
+}
+
+.tryAgain:hover{
+  background-color: whitesmoke;
 }

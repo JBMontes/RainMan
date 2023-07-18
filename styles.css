@@ -48,7 +48,7 @@ p{
   padding:9px;
 }
 .alphabets{
-  padding:50px
+  /* padding:3px */
 }
 
 li{
@@ -67,6 +67,7 @@ ul{
   flex-direction: row;
   justify-content: space-evenly;
   border: 3px solid black;
+  
   border-radius: 50px;
   background-color: green;
   animation: lower;
